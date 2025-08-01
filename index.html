@@ -2,11 +2,12 @@
 <html lang="tr">
 <head>
   <meta charset="UTF-8">
-  <title>Barışalım mı?</title>
+  <title>Barışalım mı NEHİR?</title>
   <style>
     body {
       font-family: Arial, sans-serif;
-      background-color: #fff0f5;
+      background: url('background.png') no-repeat center center fixed;
+      background-size: cover;
       text-align: center;
       margin: 0;
       padding: 0;
@@ -19,6 +20,7 @@
 
     h1, h2 {
       color: #d6336c;
+      text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
     }
 
     button {
@@ -47,7 +49,7 @@
       position: fixed;
       top: 0;
       left: 0;
-      background-color: #4CAF50;
+      background-color: rgba(76, 175, 80, 0.9);
       color: white;
       width: 100vw;
       height: 100vh;
@@ -63,7 +65,8 @@
     #finalMessage {
       font-size: 28px;
       margin-top: 30px;
-      color: #333;
+      color: #fff;
+      text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
     }
 
     #titles {
@@ -78,8 +81,8 @@
 <body>
 
   <div id="titles">
-    <h1 id="mainText">Seni üzdüğüm için özür dilerim.</h1>
-    <h2 id="questionText">Barışalım mı?</h2>
+    <h1 id="mainText">Nehir, seni üzdüğüm için çok özür dilerim.</h1>
+    <h2 id="questionText">Barışalım mı NEHİR?</h2>
   </div>
 
   <div id="buttons">
@@ -87,7 +90,7 @@
     <button id="noBtn">Hayır</button>
   </div>
 
-  <div id="fullScreenYes">EVET</div>
+  <div id="fullScreenYes">EVET NEHİR 💖</div>
   <div id="finalMessage"></div>
 
   <script>
@@ -107,21 +110,20 @@
       yesBtn.style.fontSize = `${growSize}px`;
       yesBtn.style.padding = `${growSize / 2}px ${growSize}px`;
 
-      // Her tıklamada yazılar yenileniyor
-      mainText.textContent = "Ama gerçekten üzgünüm...";
-      questionText.textContent = "Yine de barışalım mı?";
+      mainText.textContent = "Ama Nehir, gerçekten üzgünüm...";
+      questionText.textContent = "Yine de barışalım mı NEHİR?";
 
       if (growSize >= 200) {
         fullScreenYes.style.display = 'flex';
-        titlesDiv.classList.add('hidden'); // Yazıları sakla
+        titlesDiv.classList.add('hidden');
       }
     });
 
     function showFinalMessage() {
       fullScreenYes.style.display = 'none';
-      buttonsDiv.classList.add('hidden'); // Butonları gizle
+      buttonsDiv.classList.add('hidden');
       titlesDiv.classList.remove('hidden');
-      mainText.textContent = "Evet diyeceğini biliyordum.";
+      mainText.textContent = "Evet diyeceğini biliyordum NEHİR 💕";
       questionText.textContent = "Teşekkür ederim ❤️";
     }
 
